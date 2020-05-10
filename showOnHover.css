@@ -1,0 +1,19 @@
+div {
+	display: none;
+}
+
+a:hover + div {
+	display: block;
+}
+h1 {
+	color: rgb(255, 253, 253);
+}
+p {
+	color: rgb(255, 255, 255);
+}
+p:hover {
+	color: teal;
+}
+h1:hover {
+	color: teal;
+}
