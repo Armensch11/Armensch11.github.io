@@ -1,19 +1,36 @@
-div {
-	display: none;
+#main-themes {
+	text-align: center;
+	size: 50%;
+}
+a.main-themes {
+	border-radius: 3px;
+	border-color: black;
+	border-width: 2px;
 }
 
-a:hover + div {
-	display: block;
+article {
+	margin-left: 25%;
+	margin-right: 25%;
+	padding-top: 5%;
 }
-h1 {
-	color: rgb(255, 253, 253);
+.main-button {
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 3px;
+	color: rgb(197, 103, 103);
+	padding: 15px 25px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+
+	transition-delay: 200ms;
 }
-p {
-	color: rgb(255, 255, 255);
-}
-p:hover {
-	color: teal;
-}
-h1:hover {
-	color: teal;
+
+.main-button:hover {
+	box-shadow: 5px 5px 5px 1px rgba(0, 0, 255, .2);
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 10%;
+
+	color: rgb(17, 92, 92);
 }
