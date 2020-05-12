@@ -14,11 +14,12 @@ article {
 	padding-top: 5%;
 }
 .main-button {
+	width: 120px;
 	background-color: white;
 	border: 2px solid black;
 	border-radius: 3px;
-	color: rgb(197, 103, 103);
-	padding: 15px 25px;
+	color: rgb(17, 16, 16);
+	padding: 15px 15px;
 	text-align: center;
 	font-size: 16px;
 	cursor: pointer;
@@ -27,10 +28,8 @@ article {
 }
 
 .main-button:hover {
-	box-shadow: 5px 5px 5px 1px rgba(0, 0, 255, .2);
+	box-shadow: 5px 5px 5px 1px rgba(100, 100, 165, 0.432);
 	font-size: 20px;
 	font-weight: bold;
-	border-radius: 10%;
-
-	color: rgb(17, 92, 92);
+	border-radius: 5px;
 }
