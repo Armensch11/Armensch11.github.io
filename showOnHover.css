@@ -23,14 +23,15 @@ body {
 
 td.header-col {
 	width: 33%;
-	border: 1px solid black;
+	border: 1px solid #ccbf0d;
 }
 td.main-col {
-	border: 1px solid black;
+	width: 33%;
+	border: 1px solid #ccbf0d;
 }
 td.footer-col {
 	width: 33%;
-	border: 1px solid black;
+	border: 1px solid #ccbf0d;
 }
 tr.header {
 	height: 40px;
@@ -52,15 +53,21 @@ tr.footer {
 	border: 0px;
 	text-align: center;
 	font-size: 16px;
+	font-family: 'Courier New', Courier, monospace;
 	cursor: pointer;
 
+	height: 40px;
 	transition-delay: 150ms;
 }
 .head-button:hover {
-	font-size: 20px;
+	color: rgb(64, 10, 116);
 	font-weight: bold;
+	font-size: 23px;
 }
-
+article {
+	font-family: 'Courier New', Courier, monospace;
+	text-align: center;
+}
 /* #main-themes {
 	text-align: center;
 	size: 50%;
