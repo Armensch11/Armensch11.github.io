@@ -1,4 +1,67 @@
-#main-themes {
+body {
+	margin: 0px;
+}
+#main-body {
+	border: 1px solid black;
+
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#header-table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#footer-table {
+	border: 1px solid black;
+
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td.header-col {
+	width: 33%;
+	border: 1px solid black;
+}
+td.main-col {
+	border: 1px solid black;
+}
+td.footer-col {
+	width: 33%;
+	border: 1px solid black;
+}
+tr.header {
+	height: 40px;
+}
+tr.main-body {
+	height: 280px;
+}
+
+tr.footer {
+	height: 40px;
+}
+
+.head-button {
+	width: 100%;
+	background-color: white;
+
+	color: rgb(17, 16, 16);
+
+	border: 0px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+
+	transition-delay: 150ms;
+}
+.head-button:hover {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* #main-themes {
 	text-align: center;
 	size: 50%;
 }
@@ -8,11 +71,6 @@ a.main-themes {
 	border-width: 2px;
 }
 
-article {
-	margin-left: 25%;
-	margin-right: 25%;
-	padding-top: 5%;
-}
 .main-button {
 	width: 120px;
 	background-color: white;
@@ -24,12 +82,32 @@ article {
 	font-size: 16px;
 	cursor: pointer;
 
-	transition-delay: 200ms;
+	transition-delay: 150ms;
 }
 
 .main-button:hover {
-	box-shadow: 5px 5px 5px 1px rgba(100, 100, 165, 0.432);
+	box-shadow: 5px 5px 5px 1px rgba(100, 100, 165, 0.5);
 	font-size: 20px;
 	font-weight: bold;
 	border-radius: 5px;
 }
+div.article-text {
+	height: 200px;
+	width: 700px;
+}
+article {
+	border-color: cornflowerblue;
+	text-align: justify;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-bottom: 5%;
+}
+#main-body {
+	width: 100%;
+	border: 3px dashed black;
+}
+.table-column {
+	background-color: rgb(155, 145, 163);
+	margin: 300px;
+	border: 5px black;
+} */
