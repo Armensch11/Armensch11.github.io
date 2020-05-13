@@ -88,6 +88,10 @@ article.footer-text {
 img {
 	width: 50%;
 }
+
+/* Es masy imy chi */
+
+/* ========================= */
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
 	background-color: transparent;
@@ -139,53 +143,3 @@ p {
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 18px;
 }
-/* #main-themes {
-	text-align: center;
-	size: 50%;
-}
-a.main-themes {
-	border-radius: 3px;
-	border-color: black;
-	border-width: 2px;
-}
-
-.main-button {
-	width: 120px;
-	background-color: white;
-	border: 2px solid black;
-	border-radius: 3px;
-	color: rgb(17, 16, 16);
-	padding: 15px 15px;
-	text-align: center;
-	font-size: 16px;
-	cursor: pointer;
-
-	transition-delay: 150ms;
-}
-
-.main-button:hover {
-	box-shadow: 5px 5px 5px 1px rgba(100, 100, 165, 0.5);
-	font-size: 20px;
-	font-weight: bold;
-	border-radius: 5px;
-}
-div.article-text {
-	height: 200px;
-	width: 700px;
-}
-article {
-	border-color: cornflowerblue;
-	text-align: justify;
-	margin-left: 25%;
-	margin-right: 25%;
-	margin-bottom: 5%;
-}
-#main-body {
-	width: 100%;
-	border: 3px dashed black;
-}
-.table-column {
-	background-color: rgb(155, 145, 163);
-	margin: 300px;
-	border: 5px black;
-} */
