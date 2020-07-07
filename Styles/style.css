@@ -10,19 +10,21 @@
 	justify-content: space-around;
 	margin-right: 30px;
 }
-#projects {
+#projects,
+#about {
 	display: flex;
 	flex-direction: column;
 	cursor: pointer;
 }
-.links-to-projects {
+.links-to-projects,
+.about-item {
 	margin-top: 15px;
 	cursor: pointer;
 }
 
 iframe {
-	width: 1920px;
-	height: 1080px;
+	width: 1400px;
+	height: 1050px;
 }
 .menu-item {
 	background-color: rgba(212, 212, 212, 0.418);
@@ -32,6 +34,7 @@ iframe {
 	border-radius: 3px;
 }
 img {
-	margin-top: 75px;
+	margin-top: 55px;
 	height: 600px;
+	border-radius: 7px;
 }

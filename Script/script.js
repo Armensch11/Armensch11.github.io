@@ -41,8 +41,9 @@ const myProjectLinks = {
 	['to Do App']: 'https://armensch11.github.io/todoapp/',
 	['the Tetris']: 'https://armensch11.github.io/tetris/'
 };
-let counter = 1;
+
 function linkProject() {
+	let count = countGen();
 	const linkWrapper = document.getElementById('projects');
 	// linkWrapper.setAttribute('id', 'link-wrapper');
 	// linkWrapper.innerHTML = 'Projects Accomplished';
@@ -80,7 +81,7 @@ function linkProject() {
 			newFrame.remove();
 		}
 		let projectLinks = document.getElementsByClassName('links-to-projects');
-		if (counter % 2 === 0) {
+		if (count.next().value % 2 === 0) {
 			for (let link of projectLinks) {
 				link.style.display = 'none';
 			}
@@ -93,8 +94,73 @@ function linkProject() {
 				}, 150 + delay);
 				delay += 70;
 			}
+			closeOtherSubMenu(document.getElementsByClassName('menu-item'), linkWrapper.innerText);
 		}
 		counter++;
 	});
 }
 linkProject();
+function* countGen() {
+	let count = 0;
+	while (true) {
+		yield count++;
+	}
+}
+function aboutSection() {
+	let count = countGen();
+	let aboutWrapper = document.getElementsByClassName('menu-item')[0];
+	aboutWrapper.setAttribute('id', 'about');
+	// let itemsWrapper=document.createElement('div');
+	// itemsWrapper.className='menu'
+	let divArr = [ 'Family', 'Education' ];
+	let elArr = [];
+	let familyDiv = document.createElement('div');
+	familyDiv.className = 'about-item';
+	familyDiv.innerText = divArr[0];
+	elArr.push(familyDiv);
+	let eduDiv = document.createElement('div');
+	eduDiv.className = 'about-item';
+	eduDiv.innerText = divArr[1];
+	elArr.push(eduDiv);
+	for (let el of elArr) {
+		el.addEventListener('click', () => {});
+		el.style.display = 'none';
+		aboutWrapper.appendChild(el);
+	}
+
+	aboutWrapper.addEventListener('click', () => {
+		let items = Array.from(document.getElementsByClassName('about-item'));
+		if (count.next().value % 2 === 0) {
+			document.getElementById('image-wrapper').style.display = 'none';
+			// console.log(aboutWrapper.innerText);
+
+			let delay = 0;
+			items.forEach((el) => {
+				setTimeout(() => {
+					el.style.display = 'initial';
+				}, 150 + delay);
+				delay += 100;
+			});
+			closeOtherSubMenu(document.getElementsByClassName('menu-item'), aboutWrapper.innerText);
+		} else {
+			document.getElementById('image-wrapper').style.display = 'initial';
+			items.forEach((el) => {
+				el.style.display = 'none';
+			});
+		}
+	});
+}
+aboutSection();
+function closeOtherSubMenu(arrLike, inTxt) {
+	// console.log(arrLike);
+	let arr = Array.from(arrLike);
+	for (let el of arr) {
+		// console.log(el.children);
+		if (el.children && el.innerText.includes(inTxt) === false) {
+			for (let elem of el.children) {
+				elem.style.display = 'none';
+			}
+			// childArr.forEach((el) => (el.style.display = 'none'));
+		}
+	}
+}
