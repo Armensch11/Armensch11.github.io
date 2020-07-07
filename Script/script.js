@@ -20,6 +20,12 @@ function mainBody() {
 	let contactsDiv = document.createElement('div');
 	contactsDiv.className = 'menu-item';
 	contactsDiv.innerText = 'CONTACTS';
+	let backImage = document.createElement('img');
+	backImage.src = './Images/AlEin1.jpg';
+	let wrapImage = document.createElement('div');
+	wrapImage.setAttribute('id', 'image-wrapper');
+	wrapImage.appendChild(backImage);
+	rightSection.appendChild(wrapImage);
 	menuWrapper.appendChild(aboutDiv);
 	menuWrapper.appendChild(interestsDiv);
 	menuWrapper.appendChild(projectsDiv);
@@ -68,6 +74,7 @@ function linkProject() {
 
 	linkWrapper.addEventListener('click', () => {
 		// console.log('I am clicked');
+		document.getElementById('image-wrapper').style.display = 'none';
 		if (document.getElementsByTagName('iframe').length !== 0) {
 			let newFrame = document.getElementsByTagName('iframe')[0];
 			newFrame.remove();
@@ -77,18 +84,14 @@ function linkProject() {
 			for (let link of projectLinks) {
 				link.style.display = 'none';
 			}
+			document.getElementById('image-wrapper').style.display = 'initial';
 		} else {
 			let delay = 0;
 			for (let link of projectLinks) {
 				setTimeout(() => {
 					link.style.display = 'initial';
-<<<<<<< HEAD
 				}, 150 + delay);
 				delay += 70;
-=======
-				}, 300 + delay);
-				delay += 200;
->>>>>>> 4c51f28... new landing page
 			}
 		}
 		counter++;
