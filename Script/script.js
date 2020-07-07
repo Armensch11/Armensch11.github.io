@@ -7,9 +7,9 @@ function randomEinstein() {
 		'./Images/AlEin5.png',
 		'./Images/AlEin6.png'
 	];
-	let index = Math.floor(Math.random() * (arr.length - 1));
+	let index = Math.round(Math.random() * arr.length);
 
-	return arr[index];
+	return arr[index] ? arr[index] : './Images/Strongfish.jpg';
 }
 function mainBody() {
 	let mainDiv = document.createElement('div');
