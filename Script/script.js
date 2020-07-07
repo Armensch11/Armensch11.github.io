@@ -1,3 +1,16 @@
+function randomEinstein() {
+	let arr = [
+		'./Images/AlEin1.png',
+		'./Images/AlEin2.png',
+		'./Images/AlEin3.png',
+		'./Images/AlEin4.png',
+		'./Images/AlEin5.png',
+		'./Images/AlEin6.png'
+	];
+	let index = Math.floor(Math.random() * (arr.length - 1));
+
+	return arr[index];
+}
 function mainBody() {
 	let mainDiv = document.createElement('div');
 	mainDiv.setAttribute('id', 'main-div');
@@ -21,7 +34,7 @@ function mainBody() {
 	contactsDiv.className = 'menu-item';
 	contactsDiv.innerText = 'CONTACTS';
 	let backImage = document.createElement('img');
-	backImage.src = './Images/AlEin1.jpg';
+	backImage.src = randomEinstein();
 	let wrapImage = document.createElement('div');
 	wrapImage.setAttribute('id', 'image-wrapper');
 	wrapImage.appendChild(backImage);
