@@ -96,7 +96,6 @@ function linkProject() {
 			}
 			closeOtherSubMenu(document.getElementsByClassName('menu-item'), linkWrapper.innerText);
 		}
-		counter++;
 	});
 }
 linkProject();
@@ -130,6 +129,11 @@ function aboutSection() {
 
 	aboutWrapper.addEventListener('click', () => {
 		let items = Array.from(document.getElementsByClassName('about-item'));
+		if (document.getElementsByTagName('iframe').length > 0) {
+			let newFrame = document.getElementsByTagName('iframe')[0];
+
+			newFrame.remove();
+		}
 		if (count.next().value % 2 === 0) {
 			document.getElementById('image-wrapper').style.display = 'none';
 			// console.log(aboutWrapper.innerText);
