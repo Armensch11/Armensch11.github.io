@@ -82,8 +82,13 @@ function linkProject() {
 			for (let link of projectLinks) {
 				setTimeout(() => {
 					link.style.display = 'initial';
+<<<<<<< HEAD
 				}, 150 + delay);
 				delay += 70;
+=======
+				}, 300 + delay);
+				delay += 200;
+>>>>>>> 4c51f28... new landing page
 			}
 		}
 		counter++;
