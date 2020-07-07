@@ -1,0 +1,29 @@
+#main-div {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+}
+#menu-wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 700px;
+	justify-content: space-around;
+	margin-right: 30px;
+}
+#projects {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+}
+.links-to-projects {
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+iframe {
+	min-width: 1000px;
+	height: 1000px;
+	float: left;
+	overflow: hidden;
+	overflow-x: none;
+}

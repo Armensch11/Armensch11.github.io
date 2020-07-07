@@ -82,8 +82,8 @@ function linkProject() {
 			for (let link of projectLinks) {
 				setTimeout(() => {
 					link.style.display = 'initial';
-				}, 100 + delay);
-				delay += 50;
+				}, 150 + delay);
+				delay += 70;
 			}
 		}
 		counter++;
