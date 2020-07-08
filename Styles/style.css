@@ -1,11 +1,16 @@
 #main-div {
-	display: flex;
-	flex-direction: row;
-	height: 100%;
+	display: grid;
+	grid-row: 200px;
+	/* flex-direction: row; */
+	/* height: 100%; */
 }
 #menu-wrapper {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 30px;
+
+	/* flex-direction: column; */
 	height: 700px;
 	justify-content: space-around;
 	margin-right: 30px;

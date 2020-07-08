@@ -85,7 +85,7 @@ function linkProject() {
 		});
 		linkWrapper.appendChild(newLink);
 	}
-
+	// mouseInOut(linkWrapper);
 	linkWrapper.addEventListener('click', () => {
 		// console.log('I am clicked');
 		document.getElementById('image-wrapper').style.display = 'none';
@@ -139,7 +139,7 @@ function aboutSection() {
 		el.style.display = 'none';
 		aboutWrapper.appendChild(el);
 	}
-
+	// mouseInOut(aboutWrapper);
 	aboutWrapper.addEventListener('click', () => {
 		let items = Array.from(document.getElementsByClassName('about-item'));
 		if (document.getElementsByTagName('iframe').length > 0) {
@@ -181,3 +181,35 @@ function closeOtherSubMenu(arrLike, inTxt) {
 		}
 	}
 }
+
+function backgroundColorRandomiser() {
+	const colorArr = [
+		'#E27D60',
+		'#8EE4AF',
+		'#E8A87C',
+		'#c38D9E',
+		'#41B3A3',
+		'#97CAEF',
+		'#7395AE',
+		'#83677B',
+		'#ADADAD',
+		'#C5C6C7',
+		'#66FCF0',
+		'#EFE2BA',
+		'#C5CBE3'
+	];
+	let index = Math.round(Math.random() * (colorArr.length - 1));
+	return colorArr[index];
+}
+function mouseInOut(element) {
+	element.addEventListener('mouseover', () => {
+		element.style.backgroundColor = backgroundColorRandomiser();
+	});
+	element.addEventListener('mouseleave', () => {
+		element.style.backgroundColor = backgroundColorRandomiser();
+	});
+}
+function wrapAnyDiv(wrapper) {
+	mouseInOut(wrapper);
+}
+Array.from(document.getElementsByClassName('menu-item')).forEach((el) => wrapAnyDiv(el));
