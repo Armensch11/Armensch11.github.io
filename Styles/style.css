@@ -48,3 +48,9 @@ img {
 	height: 600px;
 	border-radius: 7px;
 }
+#color-button {
+	border-radius: 3px;
+	background-color: rgb(202, 202, 202);
+	cursor: pointer;
+	text-align: center;
+}

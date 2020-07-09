@@ -201,24 +201,48 @@ function backgroundColorRandomiser() {
 	let index = Math.round(Math.random() * (colorArr.length - 1));
 	return colorArr[index];
 }
-var setBackgroundColor = function(el) {
-	el.style.backgroundColor = backgroundColorRandomiser();
-};
-function mouseInOut(element) {
-	element.addEventListener('mouseover', setBackgroundColor.bind(null, element));
-	element.addEventListener('mouseleave', setBackgroundColor.bind(null, element));
+function changeBackgroundColor({ target }) {
+	target.style.backgroundColor = backgroundColorRandomiser();
 }
-function wrapAnyDiv(wrapper) {
-	mouseInOut(wrapper);
-}
-Array.from(document.getElementsByClassName('menu-item')).forEach((el) => wrapAnyDiv(el));
-function fixBackgroundColors() {
-	let arr = Array.from(document.getElementsByClassName('menu-item'));
-	arr.forEach((item) => {
-		console.log('befor');
-		item.removeEventListener('mouseover', setBackgroundColor.bind(null, item), false);
-		item.removeEventListener('mouseleave', setBackgroundColor, false);
-		console.log('after');
+// function mouseInOut(element) {
+// 	element.addEventListener('mouseover', setBackgroundColor(element));
+// 	element.addEventListener('mouseleave', setBackgroundColor(element));
+// }
+// function wrapAnyDiv(wrapper) {
+// 	mouseInOut(wrapper);
+// }
+function changeColors() {
+	Array.from(document.getElementsByClassName('menu-item')).forEach(function(el) {
+		el.addEventListener('mouseenter', changeBackgroundColor);
+		el.addEventListener('mouseleave', changeBackgroundColor);
 	});
 }
-// // fixBackgroundColors();
+changeColors();
+const colorBtn = document.createElement('div');
+colorBtn.setAttribute('id', 'color-button');
+let count = countGen();
+count.next();
+colorBtn.addEventListener('click', () => {
+	if (count.next().value % 2 === 0) {
+		changeColors();
+		colorBtn.innerText = '';
+		colorBtn.innerText = 'Save these pallette';
+		colorBtn.style.backgroundColor = '#C5CBE3';
+	} else {
+		saveCurrentColors();
+		colorBtn.innerText = '';
+		colorBtn.innerText = 'change colors';
+		colorBtn.style.backgroundColor = '#ADADAD';
+	}
+});
+colorBtn.innerText = 'save these colors';
+document.getElementsByTagName('section')[0].prepend(colorBtn);
+function saveCurrentColors() {
+	let arr = Array.from(document.getElementsByClassName('menu-item'));
+	arr.forEach((item) => {
+		// console.log('before');
+		item.removeEventListener('mouseenter', changeBackgroundColor);
+		item.removeEventListener('mouseleave', changeBackgroundColor);
+		// console.log('after');
+	});
+}
