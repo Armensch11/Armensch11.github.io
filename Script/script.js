@@ -227,7 +227,7 @@ colorBtn.addEventListener('click', () => {
 		changeColors();
 		colorBtn.innerText = '';
 		colorBtn.innerText = 'Save these pallette';
-		colorBtn.style.backgroundColor = '#C5CBE3';
+		colorBtn.style.backgroundColor = '#7395AE';
 	} else {
 		saveCurrentColors();
 		colorBtn.innerText = '';
