@@ -14,8 +14,7 @@
 	height: 700px;
 	justify-content: space-around;
 }
-#projects,
-#about {
+.menu-item {
 	display: flex;
 	flex-direction: column;
 	cursor: pointer;
@@ -57,4 +56,14 @@ img {
 		'Helvetica Neue', sans-serif;
 	color: rgb(245, 245, 220);
 	font-size: 20px;
+}
+#item-to-fullsize {
+	height: 600px;
+}
+#back-button {
+	background-color: rgb(179, 179, 179);
+	color: rgb(255, 255, 245);
+	width: fit-content;
+	padding: 3px;
+	cursor: pointer;
 }
