@@ -16,35 +16,36 @@ function mainBody() {
 	mainDiv.setAttribute('id', 'main-div');
 	let menuWrapper = document.createElement('div');
 	menuWrapper.setAttribute('id', 'menu-wrapper');
-	let rightSection = document.createElement('section');
-	rightSection.setAttribute('id', 'right-section');
+	// let rightSection = document.createElement('section');
+	// rightSection.setAttribute('id', 'right-section');
 
 	let aboutDiv = document.createElement('div');
 	aboutDiv.className = 'menu-item';
-	aboutDiv.innerText = 'ABOUT';
+	aboutDiv.innerText = 'Info';
 
 	let interestsDiv = document.createElement('div');
 	interestsDiv.className = 'menu-item';
-	interestsDiv.innerText = 'INTERESTS';
+	interestsDiv.innerText = 'Interests';
 	let projectsDiv = document.createElement('div');
 	projectsDiv.className = 'menu-item';
 	projectsDiv.setAttribute('id', 'projects');
-	projectsDiv.innerText = 'PROJECTS';
+	projectsDiv.innerText = 'Portfolio';
 	let contactsDiv = document.createElement('div');
 	contactsDiv.className = 'menu-item';
-	contactsDiv.innerText = 'CONTACTS';
+	contactsDiv.innerText = 'Contact Me';
 	let backImage = document.createElement('img');
 	backImage.src = randomEinstein();
 	let wrapImage = document.createElement('div');
 	wrapImage.setAttribute('id', 'image-wrapper');
 	wrapImage.appendChild(backImage);
-	rightSection.appendChild(wrapImage);
+	// rightSection.appendChild(wrapImage);
 	menuWrapper.appendChild(aboutDiv);
 	menuWrapper.appendChild(interestsDiv);
 	menuWrapper.appendChild(projectsDiv);
 	menuWrapper.appendChild(contactsDiv);
+	menuWrapper.appendChild(wrapImage);
 	mainDiv.appendChild(menuWrapper);
-	mainDiv.appendChild(rightSection);
+	// mainDiv.appendChild(rightSection);
 	document.body.appendChild(mainDiv);
 }
 mainBody();
@@ -184,18 +185,18 @@ function closeOtherSubMenu(arrLike, inTxt) {
 
 function backgroundColorRandomiser() {
 	const colorArr = [
-		'#E27D60',
-		'#8EE4AF',
-		'#E8A87C',
+		'#8d69af',
+		'#63a098',
+		'#aca65b',
 		'#c38D9E',
-		'#41B3A3',
+		'#882bdfc4',
 		'#97CAEF',
 		'#7395AE',
 		'#83677B',
 		'#ADADAD',
 		'#C5C6C7',
-		'#63cdfe',
-		'#EFE2BA',
+
+		'#be466ac4',
 		'#C5CBE3'
 	];
 	let index = Math.round(Math.random() * (colorArr.length - 1));
@@ -236,7 +237,7 @@ colorBtn.addEventListener('click', () => {
 	}
 });
 colorBtn.innerText = 'keep colors';
-document.getElementsByTagName('section')[0].prepend(colorBtn);
+document.getElementById('menu-wrapper').appendChild(colorBtn);
 function saveCurrentColors() {
 	let arr = Array.from(document.getElementsByClassName('menu-item'));
 	arr.forEach((item) => {
