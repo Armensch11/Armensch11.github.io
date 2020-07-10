@@ -216,6 +216,9 @@ function changeColors() {
 	Array.from(document.getElementsByClassName('menu-item')).forEach(function(el) {
 		el.addEventListener('mouseenter', changeBackgroundColor);
 		el.addEventListener('mouseleave', changeBackgroundColor);
+		// el.addEventListener('mouseover', () => {
+		// 	el.style.boxShadow = '5px 5px grey';
+		// });
 	});
 }
 changeColors();
@@ -244,6 +247,7 @@ function saveCurrentColors() {
 		// console.log('before');
 		item.removeEventListener('mouseenter', changeBackgroundColor);
 		item.removeEventListener('mouseleave', changeBackgroundColor);
+
 		// console.log('after');
 	});
 }
@@ -268,6 +272,61 @@ function backToMain() {
 
 function makeFullSize() {
 	const menuItems = Array.from(document.getElementsByClassName('menu-item'));
-	menuItems.forEach((el) => el.addEventListener('click', hideOtherDivs));
+	menuItems.forEach((el) =>
+		el.addEventListener('click', () => {
+			hideOtherDivs();
+			if (event.target.innerText.includes('Info')) {
+				let divFamily = document.createElement('div');
+				divFamily.innerText = 'Family';
+				let divEdu = document.createElement('div');
+				divEdu.innerText = 'Education';
+				document.getElementById('item-to-fullsize').appendChild(divFamily);
+				document.getElementById('item-to-fullsize').appendChild(divEdu);
+			}
+			if (event.target.innerText.includes('Portfolio')) {
+				let proj1 = document.createElement('div');
+				proj1.innerText = 'Slider';
+				let proj2 = document.createElement('div');
+				proj2.innerText = 'To Do APP';
+				let proj3 = document.createElement('div');
+				proj3.innerText = 'The Tetris';
+
+				document.getElementById('item-to-fullsize').appendChild(proj1);
+				document.getElementById('item-to-fullsize').appendChild(proj2);
+				document.getElementById('item-to-fullsize').appendChild(proj3);
+			}
+			if (event.target.innerText.includes('Interests')) {
+				let divSport = document.createElement('div');
+				divSport.innerText = 'Sports';
+				let divDesign = document.createElement('div');
+				divDesign.innerText = 'loft style Architecture';
+				let divCrypto = document.createElement('div');
+				divCrypto.innerText = 'Crypto Currency';
+
+				document.getElementById('item-to-fullsize').appendChild(divSport);
+				document.getElementById('item-to-fullsize').appendChild(divDesign);
+				document.getElementById('item-to-fullsize').appendChild(divCrypto);
+			}
+			if (event.target.innerText.includes('Contact')) {
+				let divPhone = document.createElement('div');
+				divPhone.innerText = 'Mobile';
+				let divViber = document.createElement('div');
+				divViber.innerText = 'Viber';
+				let divFacebook = document.createElement('div');
+				divFacebook.innerText = 'FaceBook';
+				let divEmail = document.createElement('div');
+				divEmail.innerText = 'Email';
+				let divAddress = document.createElement('div');
+				divAddress.innerText = 'Address';
+
+				document.getElementById('item-to-fullsize').appendChild(divPhone);
+				document.getElementById('item-to-fullsize').appendChild(divViber);
+				document.getElementById('item-to-fullsize').appendChild(divFacebook);
+				document.getElementById('item-to-fullsize').appendChild(divEmail);
+				document.getElementById('item-to-fullsize').appendChild(divAddress);
+			}
+		})
+	);
 }
+
 makeFullSize();
