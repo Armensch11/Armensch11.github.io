@@ -33,6 +33,11 @@ function mainBody() {
 	let contactsDiv = document.createElement('div');
 	contactsDiv.className = 'menu-item';
 	contactsDiv.innerText = 'Contact Me';
+	let skillsDiv = document.createElement('div');
+	skillsDiv.className = 'menu-item';
+	skillsDiv.innerText = 'Skills';
+	skillsDiv.setAttribute('id', 'skills-div');
+
 	let backImage = document.createElement('img');
 	backImage.src = randomEinstein();
 	let wrapImage = document.createElement('div');
@@ -43,6 +48,7 @@ function mainBody() {
 	menuWrapper.appendChild(interestsDiv);
 	menuWrapper.appendChild(projectsDiv);
 	menuWrapper.appendChild(contactsDiv);
+	menuWrapper.appendChild(skillsDiv);
 	menuWrapper.appendChild(wrapImage);
 	mainDiv.appendChild(menuWrapper);
 	// mainDiv.appendChild(rightSection);
