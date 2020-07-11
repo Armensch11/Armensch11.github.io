@@ -46,8 +46,9 @@ function mainBody() {
 	// rightSection.appendChild(wrapImage);
 	menuWrapper.appendChild(aboutDiv);
 	menuWrapper.appendChild(interestsDiv);
-	menuWrapper.appendChild(projectsDiv);
+
 	menuWrapper.appendChild(contactsDiv);
+	menuWrapper.appendChild(projectsDiv);
 	menuWrapper.appendChild(skillsDiv);
 	menuWrapper.appendChild(wrapImage);
 	mainDiv.appendChild(menuWrapper);

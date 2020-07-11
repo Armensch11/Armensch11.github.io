@@ -93,3 +93,17 @@ img {
 	height: 100%;
 	object-fit: contain;
 }
+#item-to-fullsize {
+	display: grid;
+
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(15, 1fr);
+
+	border: 2px solid grey;
+}
+#back-button {
+	grid-column-start: 11;
+	grid-column-end: 12;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
